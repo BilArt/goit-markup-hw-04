@@ -188,6 +188,15 @@ footer .custom-link__logo {
 /* index.html */
 
 /* Solutions-section */
+.solutions-section {
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/hero-bg.jpg);
+
+}
+
 .solutions-section__container {
   padding-top: 188px;
   padding-bottom: 188px;
@@ -233,6 +242,15 @@ footer .custom-link__logo {
 
 .strategy-section__cards-item {
   width: calc((100% - 72px) / 4);
+}
+
+.strategy-section__cards-item__svg {
+  text-align: center;
+  margin-bottom: 8px;
+  background-color: #f4f4f4;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-radius: 4px;
 }
 
 /* doing-section */
