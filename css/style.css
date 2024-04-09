@@ -194,7 +194,6 @@ footer .custom-link__logo {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/hero/hero-bg.jpg);
-
 }
 
 .solutions-section__container {
@@ -293,6 +292,26 @@ footer .custom-link__logo {
 .team-section__cards-item__text {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+/* Customers-section */
+.customers-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.customers-section__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+}
+
+.customers-section__list-item {
+  width: calc((100% - 120px) / 6);
+  padding: 16px 32px 16px 32px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
 }
 
 /* portfolio */
