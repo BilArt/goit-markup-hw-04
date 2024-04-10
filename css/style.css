@@ -302,14 +302,20 @@ footer .custom-link__logo {
 
 .customers-section__list {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   gap: 24px;
 }
 
 .customers-section__list-item {
   width: calc((100% - 120px) / 6);
-  padding: 16px 32px 16px 32px;
+  height: 88px;
+}
+
+.customers-section__list-item a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #8e8f99;
   border-radius: 4px;
 }
