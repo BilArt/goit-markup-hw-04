@@ -289,9 +289,45 @@ footer .custom-link__logo {
   background-color: var(--white-color);
 }
 
+.team-section__cards-item__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-section__cards-item__links-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.team-section__cards-item__links__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border: 1px solid var(--iris-color);
+  background-color: var(--iris-color);
+  border-radius: 50%;
+}
+
+.team-section__cards-item__links__icon:hover {
+  background-color: var(--ocean-color);
+}
+
+.team-section__cards-item__links__icon use {
+  fill: var(--white-color);
+}
+
 .team-section__cards-item__text {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.team-section__cards-item__p {
+  margin-bottom: 8px;
 }
 
 /* Customers-section */
@@ -318,6 +354,10 @@ footer .custom-link__logo {
   align-items: center;
   border: 1px solid #8e8f99;
   border-radius: 4px;
+}
+
+.customers-section__list-item:hover use {
+  fill: var(--ocean-color);
 }
 
 /* portfolio */
