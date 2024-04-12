@@ -54,7 +54,10 @@
       <section class="solutions-section">
         <div class="container solutions-section__container">
           <h1 class="title-1">Effective Solutions for Your Business</h1>
-          <button class="solutions-section__button data-modal-open" type="button">
+          <button
+            class="solutions-section__button data-modal-open"
+            type="button"
+          >
             Order Service
           </button>
         </div>
@@ -469,13 +472,16 @@
       </div>
     </footer>
 
-    <div class="data-modal">
+    <div class="data-modal is-hidden">
       <div class="modal__box">
-        ssss
-        <button class="data-modal__close-btn"></button>
+        <button type="button" class="data-modal-close">
+          <svg width="8" height="8">
+            <use href="./images/svg/iconpack.svg#icon-close_btn"></use>
+          </svg>
+        </button>
       </div>
     </div>
 
-    <script defer src="./js/modal.js"></script>
+    <script defer src="./js/new-modal.js"></script>
   </body>
 </html>
