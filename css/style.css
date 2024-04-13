@@ -234,6 +234,10 @@ footer .custom-link__logo {
 
 /* Solutions-section */
 .solutions-section {
+  padding-top: 188px;
+  padding-bottom: 188px;
+  max-width: 1440px;
+  width: 100%;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -242,8 +246,6 @@ footer .custom-link__logo {
 }
 
 .solutions-section__container {
-  padding-top: 188px;
-  padding-bottom: 188px;
   margin-left: auto;
   margin-right: auto;
   max-width: 530px;
@@ -327,6 +329,10 @@ footer .custom-link__logo {
 }
 
 .team-section__cards-item {
+  border-radius: 0 0 4px 4px;
+  padding: 0px 0px 32px 0px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   width: calc((100% - 72px) / 4);
   border-radius: 0 0 4px 4px;
   text-align: center;
@@ -429,6 +435,31 @@ footer .custom-link__logo {
 .portfolio-section__cards-item {
   width: calc((100% - 48px) / 3);
   border: 1px solid var(--cornflower-color);
+  transition: box-shadow ease-in-out;
+  transform: translateY(100%);
+}
+
+.portfolio-section__cards-item:hover {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
+  cursor: pointer;
+}
+
+.portfolio-section__cards-item:hover img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0); 
 }
 
 .cards-item__info {
