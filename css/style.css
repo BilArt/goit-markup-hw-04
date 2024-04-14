@@ -143,16 +143,14 @@ nav {
 .current::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  height: 2px;
   background-color: transparent;
   transition: background-color ease-in-out;
 }
 
-.custom-link.current:hover {
-  border-bottom: 2px solid;
+.custom-link.current {
+  border-bottom: 4px solid;
+  border-radius: 2px;
 }
 
 .contact-link {
@@ -190,7 +188,6 @@ nav {
 
 .footer__container {
   display: flex;
-  gap: 120px;
 }
 
 footer .custom-link__logo {
@@ -204,6 +201,7 @@ footer .custom-link__logo {
 .footer__text {
   max-width: 264px;
   width: 100%;
+  margin-right: 120px;
 }
 
 .footer__icons__list {
@@ -212,22 +210,27 @@ footer .custom-link__logo {
 }
 
 .footer__icons__list-item {
-  border-radius: 50%;
-  background-color: var(--iris-color);
   height: 40px;
   width: 40px;
+}
+
+.list-item__link:hover {
+  background-color: #31d0aa;
+}
+
+.list-item__link use {
+  fill: var(--white-color);
+}
+
+.list-item__link {
+  border-radius: 50%;
+  background-color: var(--iris-color);
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color ease-in-out;
-}
-
-.footer__icons__list-item:hover {
-  background-color: #31d0aa;
-}
-
-.footer__icons__list-item use {
-  fill: var(--white-color);
 }
 
 /* index.html */
@@ -236,6 +239,8 @@ footer .custom-link__logo {
 .solutions-section {
   padding-top: 188px;
   padding-bottom: 188px;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 1440px;
   width: 100%;
   background-image: linear-gradient(
@@ -330,7 +335,6 @@ footer .custom-link__logo {
 
 .team-section__cards-item {
   border-radius: 0 0 4px 4px;
-  padding: 0px 0px 32px 0px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   width: calc((100% - 72px) / 4);
@@ -355,22 +359,27 @@ footer .custom-link__logo {
 }
 
 .team-section__cards-item__links__icon {
+  height: 40px;
+  width: 40px;
+}
+
+.icon__link {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  width: 40px;
+  height: 100%;
+  width: 100%;
   border: 1px solid var(--iris-color);
   background-color: var(--iris-color);
   border-radius: 50%;
   transition: background-color ease-in-out;
 }
 
-.team-section__cards-item__links__icon:hover {
+.icon__link:hover {
   background-color: var(--ocean-color);
 }
 
-.team-section__cards-item__links__icon use {
+.icon__link use {
   fill: var(--white-color);
 }
 
@@ -410,8 +419,12 @@ footer .custom-link__logo {
   transition: fill ease-in-out;
 }
 
+.customers-section__list-item:hover a {
+  border-color: #404bbf;
+}
+
 .customers-section__list-item:hover use {
-  fill: var(--ocean-color);
+  fill: #404bbf;
 }
 
 /* portfolio */
@@ -434,16 +447,6 @@ footer .custom-link__logo {
 
 .portfolio-section__cards-item {
   width: calc((100% - 48px) / 3);
-  border: 1px solid var(--cornflower-color);
-  transition: box-shadow ease-in-out;
-  transform: translateY(100%);
-}
-
-.portfolio-section__cards-item:hover {
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  background: #fff;
-  cursor: pointer;
 }
 
 .portfolio-section__cards-item:hover img::after {
@@ -459,14 +462,51 @@ footer .custom-link__logo {
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease-in-out;
-  transform: translateY(0); 
+  transform: translateY(0);
+}
+
+.portfolio-section__cards-item__link {
+  transition: box-shadow ease-in-out;
 }
 
 .cards-item__info {
   padding-top: 32px;
   padding-left: 16px;
   padding-bottom: 32px;
+  border-left: 1px solid var(--cornflower-color);
+  border-right: 1px solid var(--cornflower-color);
+  border-bottom: 1px solid var(--cornflower-color);
 }
+
+.portfolio-section__cards-item:hover .cards-item__info {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: var(--white-color);
+}
+
+.overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #404bbf;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--cloud-color);
+  padding: 40px 32px 164px 32px;
+}
+
+.portfolio-section__cards-item__link:hover .overlay-text,
+.portfolio-section__cards-item__link:focus .overlay-text {
+  transform: translateY(0%);
+}
+
 
 .buttons-list__button {
   padding: 12px 24px 12px 24px;
