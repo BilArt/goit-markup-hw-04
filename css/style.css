@@ -41,6 +41,11 @@ ul {
   list-style: none;
 }
 
+button {
+  padding: 0;
+  margin: 0;
+}
+
 p {
   margin: 0;
   padding: 0;
@@ -204,6 +209,10 @@ footer .custom-link__logo {
   margin-right: 120px;
 }
 
+.footer__icons {
+  margin-right: 80px;
+}
+
 .footer__icons__list {
   display: flex;
   gap: 16px;
@@ -212,6 +221,60 @@ footer .custom-link__logo {
 .footer__icons__list-item {
   height: 40px;
   width: 40px;
+}
+
+.subscribe__form {
+  display: flex;
+}
+
+.subscribe__form button {
+  padding: 8px 24px;
+  line-height: 1.5;
+  max-height: 40px; /* Примусово обмежив!!! */
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--iris-color);
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+}
+
+.subscribe__form button:hover {
+  background-color: var(--ocean-color);
+}
+
+.subscribe__form button svg {
+  margin-left: 16px;
+  fill: var(--white-color);
+}
+
+.form__group {
+  margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__group label {
+  display: block;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--white-color);
+}
+
+.form__group input {
+  color: var(--white-color);
+  border: 1px solid var(--white-color);
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: inherit;
+}
+
+.form__group input::placeholder {
+  color: var(--white-color);
 }
 
 .list-item__link:hover {
@@ -506,7 +569,6 @@ footer .custom-link__logo {
 .portfolio-section__cards-item__link:focus .overlay-text {
   transform: translateY(0%);
 }
-
 
 .buttons-list__button {
   padding: 12px 24px 12px 24px;
